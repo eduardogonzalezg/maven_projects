@@ -1,6 +1,8 @@
 package trains;
 
 import java.io.*;
+import java.util.List;
+import java.util.ArrayList;
 import java.util.Scanner;
 
 /**
@@ -27,7 +29,17 @@ public class Main {
 			Graph graph = new Graph(input);
 //			GreedyAlgorithm dijkstra = new DijsktraAlgorithm();
 			
+			RoutePlanner rp = new RoutePlanner();
+			
+			//Test 1
+			List<Town> newRoute = new ArrayList();
+			newRoute.add(new Town("A"));
+			newRoute.add(new Town("B"));
+			newRoute.add(new Town("C"));
+			
 			System.out.println(graph.toString());
+			
+			System.out.println("Distance for route A-B-C is..."+rp.calculateRouteDistance(graph, newRoute));
 		}		
 		
 		System.out.println("******** PROGRAM FINISHED ********");

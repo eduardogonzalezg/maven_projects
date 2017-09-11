@@ -3,6 +3,6 @@
   <groupId>org.maven.trains</groupId>
   <artifactId>trains</artifactId>
   <version>1.0</version>
-  <name>trains</name>
-  <description>ThoughtWorks Code assingment Eduardo Gonzalez</description>
+  <name>TrainsJavaEG</name>
+  <description>ThoughtWorks Code assignment EG</description>
 </project>

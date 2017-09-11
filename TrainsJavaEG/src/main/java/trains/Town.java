@@ -5,7 +5,7 @@ import java.util.Iterator;
 import java.util.Map;
 
 /**
- * @author EGonzalez
+ * @author EG
  *
  */
 public class Town {
@@ -18,21 +18,12 @@ public class Town {
 	/**
 	 * 
 	 */
-	private Map<Town, Integer> adjacentTowns = new HashMap<Town, Integer>();
+	private int distance = Integer.MAX_VALUE;
 	
 	/**
-	 * @return
+	 * 
 	 */
-	public String getName() {
-		return name;
-	}
-
-	/**
-	 * @return
-	 */
-	public Map<Town, Integer> getAdjacentTowns() {
-		return adjacentTowns;
-	}
+	private Map<Town, Integer> adjacentTowns = new HashMap<Town, Integer>();
 
 	/**
 	 * @param name
@@ -42,13 +33,40 @@ public class Town {
 	}
 	
 	/**
+	 * @return
+	 */
+	public String getName() {
+		return name;
+	}
+	
+	/**
+	 * @return
+	 */
+	public int getDistance(){
+		return distance;
+	}
+	
+	/**
+	 * @param other
+	 */
+	public void setDistance(int other){
+		distance = other;
+	}
+
+	/**
+	 * @return
+	 */
+	public Map<Town, Integer> getAdjacentTowns() {
+		return adjacentTowns;
+	}
+	
+	/**
 	 * @param other
 	 * @param distance
 	 */
 	public void addAdjacentTown(Town other, int distance){
 		adjacentTowns.put(other, distance);
-	}
-	
+	}	
 	
 	/* (non-Javadoc)
 	 * Override method to made comparison methods (like contains) accurate.
@@ -80,6 +98,9 @@ public class Town {
 	    return true;
 	}
 	
+	/* (non-Javadoc)
+	 * @see java.lang.Object#toString()
+	 */
 	@Override
 	public String toString(){
 		String result ="";

@@ -9,9 +9,9 @@ package trains;
  */
 public interface GreedyAlgorithm {
 	
-	public int getDistance();
+	public int getDistance(Graph graph);
 	
-	public int getShortestDistance();
+	public int getShortestDistance(Graph graph, Town origin);
 		
 	public boolean routeExists();
 		
