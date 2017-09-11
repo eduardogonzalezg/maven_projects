@@ -32,18 +32,24 @@ public class Main {
 			RoutePlanner rp = new RoutePlanner();
 			
 			//Test 1
-			List<Town> newRoute = new ArrayList();
+			List<Town> newRoute = new ArrayList<Town>();
 			newRoute.add(new Town("A"));
+			newRoute.add(new Town("E"));
 			newRoute.add(new Town("B"));
 			newRoute.add(new Town("C"));
+			newRoute.add(new Town("D"));
 			
 			System.out.println(graph.toString());
 			
-			System.out.println("Distance for route A-B-C is..."+rp.calculateRouteDistance(graph, newRoute));
-		}		
-		
-		System.out.println("******** PROGRAM FINISHED ********");
-		
+			System.out.println("Distance for route A-E-B-C-D is..."+rp.calculateRouteDistance(graph, newRoute));
+			
+			// Test 2
+//			int result = rp.calculateNumberOfRoutes(graph, new Town("C"), new Town("C"), 1, -1, false);
+			
+			// Test 3
+			int result2 = rp.calculateNumberOfRoutesMaxWeight(graph, new Town("C"), new Town("C"), 30);
+		}
+		System.out.println("******** PROGRAM FINISHED ********");		
 	}
 	
 	public static String [] getInput(String filePath) {
@@ -58,7 +64,6 @@ public class Main {
 		    // Validate input		    
 		    if(validateInput(line.split(","))){
 		    	result = line.split(",");
-		    	System.out.println("******** INPUT IS CORRECT (delete this comment) ********");
 		    }		    
 		}
 		catch(Exception ex)
