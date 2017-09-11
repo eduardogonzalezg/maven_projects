@@ -30,7 +30,7 @@ public class Main {
 			System.out.println(graph.toString());
 		}		
 		
-		System.out.println("******** PROGRAM HAS FINISHED ********");
+		System.out.println("******** PROGRAM FINISHED ********");
 		
 	}
 	
