@@ -25,7 +25,7 @@ public class Main {
 		if(input!=null){
 			// Create the Graph and initialise the algorithm
 			Graph graph = new Graph(input);
-			GreedyAlgorithm dijkstra = new DijsktraAlgorithm();
+//			GreedyAlgorithm dijkstra = new DijsktraAlgorithm();
 			
 			System.out.println(graph.toString());
 		}		
